@@ -50,10 +50,10 @@ public class POS{
         if(pm==1){
         System.out.println("Enter cupon credit (0 for no cupon) : ");
         cupon=Goola.nextDouble();
-       //***************************************Revise      do{
+       do{
         System.out.println("Loyal customer? (y for yes and n for no)");
         l=Goola.next().charAt(0);
-       //***************************************Revise      }while(l != 'y' || l != 'n');
+        }while(l != 'y' && l != 'n');
         if(l=='y'){
             t2=t1-(t1*d);
             t3=t2-cupon;
@@ -66,10 +66,10 @@ public class POS{
         else{
             System.out.println("Enter cupon credit (0 for no cupon) : ");
         cupon=Goola.nextDouble();
-        //***************************************Revise     do{
+        do{
         System.out.println("Loyal customer? (y for yes and n for no)");
         l=Goola.next().charAt(0);
-       //***************************************Revise      }while(l != 'y' || l != 'n');
+      }while(l != 'y' && l != 'n');
         if(l=='y'){
             t2=t1-(t1*d);
             t3=t2-cupon;
