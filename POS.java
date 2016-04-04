@@ -50,10 +50,10 @@ public class POS{
         if(pm==1){
         System.out.println("Enter cupon credit (0 for no cupon) : ");
         cupon=Goola.nextDouble();
-       do{
+       //***************************************Revise      do{
         System.out.println("Loyal customer? (y for yes and n for no)");
         l=Goola.next().charAt(0);
-        }while(l != 'y' && l != 'n');
+       //***************************************Revise      }while(l != 'y' || l != 'n');
         if(l=='y'){
             t2=t1-(t1*d);
             t3=t2-cupon;
@@ -66,10 +66,10 @@ public class POS{
         else{
             System.out.println("Enter cupon credit (0 for no cupon) : ");
         cupon=Goola.nextDouble();
-        do{
+        //***************************************Revise     do{
         System.out.println("Loyal customer? (y for yes and n for no)");
         l=Goola.next().charAt(0);
-      }while(l != 'y' && l != 'n');
+       //***************************************Revise      }while(l != 'y' || l != 'n');
         if(l=='y'){
             t2=t1-(t1*d);
             t3=t2-cupon;
@@ -83,7 +83,8 @@ public class POS{
      System.out.println("Cupon credit: $"+cupon);
     }
      if(l=='y'){
-         System.out.println("Discount: $"+(t1*d));
+         System.out.printf("Discount: $ %.2f",(t1*d));
+         System.out.println();
         }
      System.out.println("Total price before cupon applied: $"+t2);
         System.out.println("Total price before tax (cupon applied): $"+t3);
